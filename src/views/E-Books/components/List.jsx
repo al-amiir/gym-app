@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import {
-  fetchProductList,
-  fetchProductListDetails,
+    fetchProductList,
+    fetchProductListDetails,
 } from "../../../app/features/products/thunk";
+import { useDispatch, useSelector } from "react-redux";
 import { Button, Card, Typography } from "@mui/material";
+
+//-----------------------------------------------------------------------
 
 const initialState = {
   page: 1,
@@ -12,6 +14,8 @@ const initialState = {
   type: "book",
   taxons: "All",
 };
+
+//-----------------------------------------------------------------------
 
 const List = () => {
   const product = useSelector((state) => state.product);
