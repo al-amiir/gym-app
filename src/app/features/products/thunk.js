@@ -1,7 +1,8 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import serverLinks from '../../../router/serverLinks';
 
-// Example: Fetch data from an API
+//-----------------------------------------------------------------------
+
 export const fetchProductList = createAsyncThunk('product/fetchProductList', async (getData) => {
   try {
     const response = await fetch(serverLinks.product.list(getData));

@@ -1,12 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchProductList, fetchProductListDetails } from "./thunk";
 
+//-----------------------------------------------------------------------
+
 const initialState = {
   loading: false,
   error: null,
   list: {},
   details:{}
 };
+
+//-----------------------------------------------------------------------
 
 export const productSlice = createSlice({
   name: "product",
@@ -43,7 +47,6 @@ export const productSlice = createSlice({
   },
 });
 
-// Action creators are generated for each case reducer function
 export const { startLoading, error } = productSlice.actions;
 
 export default productSlice.reducer;
